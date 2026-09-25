@@ -4,10 +4,10 @@ import Banner from "@/public/banner.png";
 
 const Hero = () => {
     return (
-        <div className="bg-[#0B0C0E] min-h-screen px-6 py-10 lg:px-12">
+        <div className="  px-6 py-12 lg:px-12">
             <div className="max-w-[1400px] mx-auto">
 
-                <div className="min-h-[500px] rounded-2xl border border-[#252830] bg-[#15171C] px-8 py-12 md:px-12 lg:px-16 lg:py-14">
+                <div className="min-h-[500px] rounded-2xl border border-[#252830] bg-[#15171C] px-8 md:px-12 lg:px-16 lg:py-14">
 
                     <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] items-center gap-10">
 
