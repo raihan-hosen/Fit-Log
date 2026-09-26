@@ -23,9 +23,18 @@ interface WorkoutCardProps {
 }
 
 const WorkoutCard = ({ workout }: WorkoutCardProps) => {
-    const { name, image, muscleGroups, equipment, duration, caloriesBurned, rating } = workout;
+    const {
+        name,
+        image,
+        muscleGroups,
+        equipment,
+        duration,
+        caloriesBurned,
+        rating
+    } = workout;
+
     return (
-        <div className="card w-full max-w-96 overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-950">
+        <div className="card mx-auto w-full max-w-96 overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-950">
             <figure>
                 <Image
                     src={image}
@@ -45,21 +54,26 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
                             {group}
                         </span>
                     ))}
+
                 </div>
                 <h2 className="card-title text-xl sm:text-2xl font-extrabold uppercase tracking-tight text-white">
                     {name}
                 </h2>
-                <p className="text-sm text-neutral-400">{equipment}</p>
+                <p className="text-sm text-neutral-400">
+                    {equipment}
+                </p>
                 <hr className="border-neutral-800" />
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-neutral-300">
                     <div className="flex items-center gap-1.5">
                         <Clock className="h-4 w-4 shrink-0" />
                         <span>{duration} min</span>
                     </div>
+
                     <div className="flex items-center gap-1.5">
                         <Flame className="h-4 w-4 shrink-0" />
                         <span>{caloriesBurned} kcal</span>
                     </div>
+
                     <div className="flex items-center gap-1.5">
                         <Star className="h-4 w-4 shrink-0 fill-lime-300 text-lime-300" />
                         <span>{rating}</span>
@@ -69,5 +83,4 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
         </div>
     );
 };
-
 export default WorkoutCard;
