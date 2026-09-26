@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const getWorkout = async (): Promise<Workout[]> => {
     const res = await fetch(
-        "https://api.abcz.workers.dev/api/fitlog"
+        "https://api.api-store.workers.dev/api/fitlog"
     );
     const data = await res.json();
     return data;
