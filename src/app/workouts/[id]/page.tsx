@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { CalendarCheckIcon, Bookmark } from "lucide-react";
+import ReadButton from "@/src/app/components/workoutDetails/readButton";
+import SaveButton from "@/src/app/components/workoutDetails/saveButton";
 
 
 interface Workout {
@@ -152,15 +153,10 @@ const WorkoutDetailsPage = async ({
                                 ))}
                             </ol>
                         </div>
-                        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                            <button className="flex items-center justify-center gap-2 rounded-lg bg-[#C2F800] px-6 py-4 text-sm font-bold text-black transition hover:bg-[#D0FF33]">
-                                <span><CalendarCheckIcon /></span>
-                                Add to today's plan
-                            </button>
-                            <button className="flex items-center justify-center gap-2 rounded-lg border border-[#343A46] px-6 py-4 text-sm font-medium text-gray-300 transition hover:border-[#C2F800] hover:text-white">
-                                <span><Bookmark /></span>
-                                Save for later
-                            </button>
+                        <div className="mt-8 flex flex-row gap-4">
+                            <ReadButton workout={workout} />
+                            <SaveButton workout={workout} />
+
                         </div>
                     </div>
                 </div>

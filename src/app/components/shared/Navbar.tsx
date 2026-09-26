@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const menuItems = [
         { name: 'Workouts', href: '/' },
-        { name: 'My Plan', href: '/my-plan' },
+        { name: 'My Plan', href: '/myplan' },
     ];
 
     return (
@@ -100,7 +100,7 @@ const Navbar = () => {
                 </Link>
 
                 <Link
-                    href="/my-plan"
+                    href="/myplan"
                     className="flex items-center gap-1 sm:gap-2 text-sm cursor-pointer hover:opacity-80"
                 >
                     <span className="text-gray-300 hidden xs:inline sm:inline">
