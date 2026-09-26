@@ -82,7 +82,6 @@ const MyPlanPage = () => {
     return (
         <main className="min-h-screen bg-[#0D0E12] px-4 py-8 text-white md:px-8">
             <div className="mx-auto max-w-6xl">
-                {/* Header */}
                 <div className="mb-8">
                     <h1 className="font-[oswald] text-3xl font-bold sm:text-4xl">
                         MY PLAN
@@ -92,7 +91,6 @@ const MyPlanPage = () => {
                     </p>
                 </div>
 
-                {/* Stats */}
                 <div className="mb-6 grid grid-cols-3 gap-4">
                     <div className="rounded-xl bg-[#17181E] p-5">
                         <p className="text-xs text-gray-400">Exercises</p>
@@ -164,7 +162,6 @@ const MyPlanPage = () => {
                     </div>
                 </div>
 
-                {/* List */}
                 {isLoading ? (
                     <div className="flex min-h-[350px] items-center justify-center rounded-xl bg-[#17181E]">
                         <p className="text-sm text-gray-400">Loading workouts…</p>

@@ -14,7 +14,7 @@ const Navsaved = () => {
             href="/myplan"
             className="flex shrink-0 items-center gap-1 text-sm hover:opacity-80 sm:gap-2"
         >
-            <span className="hidden text-gray-300 sm:inline">
+            <span className="text-gray-300 sm:inline">
                 Saved
             </span>
 

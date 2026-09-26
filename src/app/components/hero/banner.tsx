@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowDown } from "lucide-react";
 import Banner from "@/public/banner.png";
 
 const Hero = () => {
@@ -21,9 +23,13 @@ const Hero = () => {
                                 FitLog is a dark, no-nonsense gym companion: pick a lift, lock it
                                 into today&apos;s plan, and watch the week&apos;s work add up.
                             </p>
-                            <button className="mt-6 sm:mt-8 rounded-md bg-[#C2F800] px-5 sm:px-7 py-3 sm:py-4 text-xs sm:text-sm font-bold text-black transition hover:bg-[#D0FF33]">
+                            <Link
+                                href="#library"
+                                className="mt-6 sm:mt-8 inline-flex items-center gap-2 rounded-md bg-[#C2F800] px-5 sm:px-7 py-3 sm:py-4 text-xs sm:text-sm font-bold text-black transition hover:bg-[#D0FF33]"
+                            >
                                 BROWSE WORKOUTS
-                            </button>
+                                <ArrowDown size={16} />
+                            </Link>
                         </div>
                         <div className="flex justify-center lg:justify-end mt-4 lg:mt-0">
                             <Image

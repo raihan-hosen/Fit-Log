@@ -10,7 +10,6 @@ import Navsaved from "../../NavbarDetails/Navsaved";
 
 const Navbar = () => {
     const pathname = usePathname();
-
     const menuItems = [
         {
             name: "Workouts",
@@ -21,15 +20,15 @@ const Navbar = () => {
             href: "/myplan",
         },
     ];
+
     return (
         <div className="navbar w-full bg-base-100 px-2 shadow-sm sm:px-4">
             <div className="navbar-start min-w-0">
                 <div className="dropdown">
-
                     <div
                         tabIndex={0}
                         role="button"
-                        className="btn btn-ghost lg:hidden"
+                        className="btn btn-ghost px-2 lg:hidden"
                     >
                         <svg
                             aria-label="Menu"
@@ -54,13 +53,14 @@ const Navbar = () => {
                         {menuItems.map((item) => {
                             const isActive =
                                 pathname === item.href;
+
                             return (
                                 <li key={item.href}>
                                     <Link
                                         href={item.href}
                                         className={
                                             isActive
-                                                ? "text-[#C2F800] font-bold"
+                                                ? "font-bold text-[#C2F800]"
                                                 : "text-gray-300"
                                         }
                                     >
@@ -74,16 +74,16 @@ const Navbar = () => {
 
                 <Link
                     href="/"
-                    className="btn btn-ghost flex items-center gap-2 px-2 sm:px-4"
+                    className="btn btn-ghost flex items-center gap-1 px-1 sm:gap-2 sm:px-4"
                 >
                     <Image
                         src={Logo}
                         alt="Logo"
                         width={32}
                         height={32}
-                        className="shrink-0"
+                        className="h-7 w-7 shrink-0 sm:h-8 sm:w-8"
                     />
-                    <span className="text-base font-bold tracking-wider text-white sm:text-xl">
+                    <span className="text-sm font-bold tracking-wider text-white sm:text-xl">
                         FITLOG
                     </span>
                 </Link>
@@ -94,6 +94,7 @@ const Navbar = () => {
                     {menuItems.map((item) => {
                         const isActive =
                             pathname === item.href;
+
                         return (
                             <li key={item.href}>
                                 <Link
@@ -105,19 +106,19 @@ const Navbar = () => {
                                 >
                                     {item.name}
                                 </Link>
-
                             </li>
                         );
                     })}
                 </ul>
             </div>
 
-            <div className="navbar-end min-w-0 gap-1 sm:gap-4">
-                <Navplan />
-                <Navsaved />
+            <div className="navbar-end min-w-0">
+                <div className="flex items-center gap-2 sm:gap-4">
+                    <Navplan />
+                    <Navsaved />
+                </div>
             </div>
         </div>
     );
 };
-
 export default Navbar;

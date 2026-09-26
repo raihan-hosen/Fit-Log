@@ -13,7 +13,7 @@ const getWorkout = async (): Promise<Workout[]> => {
 const WorkoutPage = async () => {
     const workoutData = await getWorkout();
     return (
-        <section>
+        <section id="library">
             <div className="px-4 sm:px-6 md:px-8 lg:px-12">
                 <h2 className="font-bold text-xl sm:text-2xl font-[oswald]">
                     THE LIBRARY
