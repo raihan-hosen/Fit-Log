@@ -21,7 +21,7 @@ interface Workout {
 }
 const getWorkout = async (id: string): Promise<Workout | undefined> => {
     const res = await fetch(
-        "https://api.abcz.workers.dev/api/fitlog"
+        "https://api.api-store.workers.dev/api/fitlog"
     );
     const data: Workout[] = await res.json();
     return data.find((workout) => workout.id.toString() === id);
